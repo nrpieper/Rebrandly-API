@@ -1,7 +1,7 @@
 // Information to reach API
 // TODO: enter your API key here:
 const apiKey = '<yourAPI>';
-const url = 'https://api.rebrandly.com/v1/links';
+const rebrandlyEndpoint = 'https://api.rebrandly.com/v1/links';
 
 // Some page elements
 const inputField = document.querySelector('#input');
@@ -19,7 +19,7 @@ const shortenUrl = () => {
       renderResponse(xhr.response);
     }
   }
-  xhr.open('POST', url);
+  xhr.open('POST', rebrandlyEndpoint);
   xhr.setRequestHeader('Content-type', 'application/json');
   xhr.setRequestHeader('apikey', apiKey);
   xhr.send(data);
